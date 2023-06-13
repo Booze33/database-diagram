@@ -67,7 +67,7 @@ In order to run this project you need:
 ### Setup
 
 Clone this repository to your desired folder:
-- Use the url to clone the repo https://github.com/Booze33/book-store.git
+- Use the url to clone the repo https://github.com/Booze33/database-diagram.git
 
 Example commands:
 
