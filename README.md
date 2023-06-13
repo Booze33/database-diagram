@@ -29,7 +29,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Book Store <a name="about-project"></a>
+# 📖 database-diagram <a name="about-project"></a>
 
 > In this project, We am going to build a database using the diagram
 ## 🛠 Built With <a name="built-with"></a>
