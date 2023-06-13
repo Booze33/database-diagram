@@ -73,7 +73,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  https://github.com/Booze33/book-store.git
+https://github.com/Booze33/database-diagram.git
 ```
 
 -
