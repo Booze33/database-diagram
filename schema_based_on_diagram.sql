@@ -39,3 +39,6 @@ CREATE TABLE medical_histories_has_treatments (
   treatments_id INT REFERENCES treatments(id),
   PRIMARY KEY(medical_histories_id, treatments_id)
 );
+
+CREATE INDEX medical_hisory_index ON medical_histories_has_treatments (medical_histories_id DESC);
+CREATE INDEX treatment_id_index ON medical_histories_has_treatments(treatments_id DESC);
