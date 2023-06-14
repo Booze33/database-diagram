@@ -29,7 +29,8 @@ CREATE TABLE treatments (
 CREATE TABLE invoice_item (
   id INT GENERATED ALWAYS AS IDENTITY,
   unit_price DECIMAL NOT NULL,
-  quantity INT, total_price DECIMAL NOT NULL,
+  quantity INT,
+  total_price DECIMAL NOT NULL,
   invoice_id INT REFERENCES invoices(id) ON DELETE CASCADE,
   treatment_id INT REFERENCES treatments(id) ON DELETE CASCADE
 );
@@ -40,5 +41,9 @@ CREATE TABLE medical_histories_has_treatments (
   PRIMARY KEY(medical_histories_id, treatments_id)
 );
 
+CREATE INDEX medical_history_id ON invoices(medical_history_id DESC);
+CREATE INDEX patient_id_index ON medical_histories(patient_id);
+CREATE INDEX invoice_id_index ON invoice_item(invoice_id DESC);
+CREATE INDEX treatment_id_index ON invoice_item(treatment_id DESC);
 CREATE INDEX medical_hisory_index ON medical_histories_has_treatments (medical_histories_id DESC);
 CREATE INDEX treatment_id_index ON medical_histories_has_treatments(treatments_id DESC);
