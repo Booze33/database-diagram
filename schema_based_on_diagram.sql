@@ -33,3 +33,9 @@ CREATE TABLE invoice_item (
   invoice_id INT REFERENCES invoices(id) ON DELETE CASCADE,
   treatment_id INT REFERENCES treatments(id) ON DELETE CASCADE
 );
+
+CREATE TABLE medical_histories_has_treatments (
+  medical_histories_id INT REFERENCES medical_histories(id),
+  treatments_id INT REFERENCES treatments(id),
+  PRIMARY KEY(medical_histories_id, treatments_id)
+);
